@@ -23,14 +23,14 @@ If you enjoyed this kata more advanced and generalized version of it can be foun
 */
 
 function tribonacci(signature, n){
+  var previousNum1 = signature[0],
+  previousNum2 = signature[1],
+  currentNum = signature[2],
+  newCurrentNum,
+  i;
 
-  var previousNum1 = signature[0];
-  var previousNum2 = signature[1];
-  var currentNum = signature[2];
-
-  for (var i = 0; i < signature.length; i++) {
-
-    var newCurrentNum = previousNum1 + previousNum2 + currentNum;
+  for (i = 0; i < signature.length; i++) {
+    newCurrentNum = previousNum1 + previousNum2 + currentNum;
 
     if (signature.length < n) {
       signature.push(newCurrentNum);
@@ -42,7 +42,6 @@ function tribonacci(signature, n){
       signature.length = n;
     }
   }
-
   return signature;
 }
 

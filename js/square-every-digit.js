@@ -11,15 +11,16 @@ Note: The function accepts an integer and returns an integer
 // Solved by multiplying the digit times itself
 
 function squareDigits(num){
+  var i,
+  result;
 
   num = num.toString().split('').map(Number);
 
-  for (var i = 0; i < num.length; i++) {
+  for (i = 0; i < num.length; i++) {
     num[i] *= num[i];
-    var result = num.join('');
+    result = num.join('');
     result = Number(result);
   }
-
   return result;
 }
 
@@ -28,15 +29,16 @@ squareDigits(9119);
 // Solved by using Math.pow()
 
 function squareDigits(num){
+  var i,
+  result;
 
   num = num.toString().split('').map(Number);
 
-  for (var i = 0; i < num.length; i++) {
+  for (i = 0; i < num.length; i++) {
     num[i] = Math.pow(num[i], 2);
-    var result = num.join('');
+    result = num.join('');
     result = Number(result);
   }
-
   return result;
 }
 

@@ -9,15 +9,15 @@ Note: array may be empty, in this case return 0.
 */
 
 function positiveSum(arr) {
+  var i,
+  sum = 0;
 
-  var sum = 0;
+  for (i = 0; i < arr.length; i++) {
 
-  for (var i = 0; i < arr.length; i++) {
     if (arr[i] > 0) {
       sum += arr[i];
     }
   }
-
   return sum;
 }
 
